@@ -22,7 +22,7 @@ variable "cluster_name" {
 }
 
 module "eks" {
-  source  = "terraform-aws-modules/eks/aws"
+  source  = "../../modules/eks"
 
   cluster_name    = var.cluster_name != "" ? var.cluster_name : null
   cluster_version = "1.29"
